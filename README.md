@@ -26,7 +26,7 @@ Refactor the RESTy application as follows:
 
 ### Links and Resources
 
-* [GitHub](https://github.com/sson68x/resty-app/pull/1)
+* [GitHub](https://github.com/sson68x/resty/pull/2)
 * [Class Demo](https://github.com/codefellows/seattle-javascript-401d47/tree/main/class-26)
 
 ### Setup
