@@ -3,7 +3,9 @@ import './footer.scss';
 const Footer = () => {
 
   return (
-    <footer>&copy; 2018</footer>
+    <>
+    <footer>Simon Son &copy; 2018</footer>
+    </>
   )
 };
 
