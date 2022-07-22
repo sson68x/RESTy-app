@@ -1,33 +1,20 @@
-# LAB 26
+# LAB 27
 
-## Project: Component Based UI
+## Project: useState() Hook
 
 ### Author: Simon Son
 
 ### Problem Domain
 
-Setup the basic scaffolding of the application, with intent being to add more functionality to the system as we go. This initial build sets up the file structure so that we can progressively build this application in a scalable manner
+Extend your React Application so that your functional components are able to manage their own state variables using the useState Hook.
 
-Refactor the RESTy application as follows:
-
-* Convert all child components of App.js from classes to functions
-  * The App component serves as the container for all sub-components of this application.
-  * Leave this component as a Class.
-  * Make sure all base styles for App are included in a .scss imported within App.js.
-  * Ensure that the Header, Footer, Results and Form components are imported using ES6 import syntax.
-
-* Use .scss files to style each component
-  * Each of the components use their own .scss file for styling.
-
-* Core application functionality should remain unchanged:
-  * The Form component should:
-    * Call a function on submit that updates the App component via a function sent down as a prop so that the app can process the form values.
-  * The Results component should show mock API results.
+* Refactor any components using this.setState to implement the useState react API hook.
+* Refactor the Form Component to implement user input from form elements, instead of hard coded string values.
 
 ### Links and Resources
 
-* [GitHub](https://github.com/sson68x/resty/pull/2)
-* [Class Demo](https://github.com/codefellows/seattle-javascript-401d47/tree/main/class-26)
+* [GitHub](https://github.com/sson68x/resty/pull/3)
+* [Class Demo](https://github.com/codefellows/seattle-javascript-401d47/tree/main/class-27)
 
 ### Setup
 
