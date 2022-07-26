@@ -1,20 +1,20 @@
-# LAB 27
+# LAB 28
 
-## Project: useState() Hook
+## Project: Component Lifecycle / useState() Hook
 
 ### Author: Simon Son
 
 ### Problem Domain
 
-Extend your React Application so that your functional components are able to manage their own state variables using the useState Hook.
+Extend your application to include the ability to send http requests and display response data, when the Form experiences a submission event.
 
-* Refactor any components using this.setState to implement the useState react API hook.
-* Refactor the Form Component to implement user input from form elements, instead of hard coded string values.
+* Refactor application methods to allow for browser side HTTP requests to be sent.
+* Make sure all relavent request and response data is displayed to the User.
 
 ### Links and Resources
 
-* [GitHub](https://github.com/sson68x/resty/pull/3)
-* [Class Demo](https://github.com/codefellows/seattle-javascript-401d47/tree/main/class-27)
+* [GitHub](https://github.com/sson68x/resty/pull/4)
+* [Class Demo](https://github.com/codefellows/seattle-javascript-401d47/tree/main/class-28)
 
 ### Setup
 
