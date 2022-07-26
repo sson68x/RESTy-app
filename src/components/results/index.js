@@ -1,13 +1,15 @@
 import './results.scss';
+import JSONPretty from 'react-json-pretty';
 
 const Results = (props) => {
 
   return (
     <section>
-      <pre data-testid="results">
-        {props.data ?
-          JSON.stringify(props.data, undefined, 2) : null}
-      </pre>
+      <JSONPretty
+        id='json-pretty'
+        data-testid="test-results"
+        data={JSON.stringify(props.data)}>
+      </JSONPretty>
     </section>
   );
 };
