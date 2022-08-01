@@ -1,40 +1,71 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import './app.scss';
+import axios from 'axios';
 import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
-import axios from 'axios';
+import History from './components/history';
+
+export const initialState = {
+  data: null,
+  requestParams: {},
+}
+
+export const restyReducer = (state, action) => {
+
+  switch (action.type) {
+
+    case 'DATA':
+      return {
+        ...state,
+        data: action.payload,
+      }
+
+    case 'PARAMS':
+      return {
+        ...state,
+        requestParams: action.payload
+      }
+
+    default:
+      return state
+  }
+}
+
 
 const App = () => {
 
-  const [data, setData] = useState(null);
-  const [requestParams, setRequestParams] = useState({});
+  const [state, dispatch] = useReducer(restyReducer, initialState);
 
-  const callApi = (requestParams) => {
-    setRequestParams(requestParams);
+  function callApi(requestParams) {
+    dispatch({ type: 'PARAMS', payload: requestParams });
   }
 
   useEffect(() => {
     const getData = async () => {
-      if (requestParams.url) {
+      if (state.requestParams.url) {
         const response = await axios({
-          method: requestParams.method,
-          url: requestParams.url,
+          method: state.requestParams.method,
+          url: state.requestParams.url,
         })
-        setData(response.data)
+        dispatch({ type: 'DATA', payload: response.data })
       }
     }
     getData();
-  }, [requestParams]);
+  }, [state.requestParams]);
 
   return (
     <>
       <Header />
-      <div>Request Method: {requestParams.method}</div>
-      <div>URL: {requestParams.url}</div>
+      <div>Request Method: {state.requestParams.method}</div>
+      <div>URL: {state.requestParams.url}</div>
       <Form handleApiCall={callApi} />
-      <Results data={data} />
+      <Results data={state.data} />
+      <History
+        data={state.data}
+        requestParams={state.requestParams}
+      />
       <Footer />
     </>
   );

@@ -1,20 +1,19 @@
-# LAB 28
+# LAB 29
 
-## Project: Component Lifecycle / useState() Hook
+## Project: Advanced State with Reducers
 
 ### Author: Simon Son
 
 ### Problem Domain
 
-Extend your application to include the ability to send http requests and display response data, when the Form experiences a submission event.
+Refactor your state management within the App component to use the useReducer hook.
 
-* Refactor application methods to allow for browser side HTTP requests to be sent.
-* Make sure all relavent request and response data is displayed to the User.
+* Replace any component state managements to use derived state from useReducer with a reducer function and intitial state..
 
 ### Links and Resources
 
-* [GitHub](https://github.com/sson68x/resty/pull/4)
-* [Class Demo](https://github.com/codefellows/seattle-javascript-401d47/tree/main/class-28)
+* [GitHub](https://github.com/sson68x/resty/pull/5)
+* [Class Demo](https://github.com/codefellows/seattle-javascript-401d47/tree/main/class-29)
 
 ### Setup
 

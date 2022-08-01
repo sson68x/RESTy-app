@@ -45,16 +45,17 @@ const Form = (props) => {
           <span id="put" onClick={handleMethod}>PUT</span>
           <span id="delete" onClick={handleMethod}>DELETE</span>
         </label>
-        {method === "PUT" || method === "POST"
-          ?
-          <>
-            <textarea
-              type="text"
+        {method === "PUT" || method === "POST" 
+            ?
+            <>
+            <h4>JSON Body</h4>
+            <textarea 
+              type='text' 
               onChange={handleBody}
             >
-            </textarea>
-          </>
-          : null}
+            </textarea> 
+            </>
+            : null }
       </form>
     </>
   );
